@@ -1,0 +1,11 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start();
+}
+$B = 5;
+$_SESSION['A'] = '1';
+$_SESSION['A'] = '2';
+$_SESSION['A'] = '3';
+$_SESSION['A'] = $B;
+echo $_SESSION['A'];
+?>
