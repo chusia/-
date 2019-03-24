@@ -1,0 +1,57 @@
+img.w_icon
+{
+    width:50px;
+    height:50px;
+}
+.w_today_icon
+{
+    width:85px;
+    height:85px;
+}
+div.box
+{
+    width:725px;
+    height: 455px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    background: url(../images/bg.jpg)no-repeat; 
+}
+.lef
+{
+    margin-left: 45px;
+    float:left;
+}
+.righ
+{
+    margin-left: 40px;
+    float:left;
+}
+.cont
+{
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+#title
+{
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+hr
+{
+    padding: 0.5px ;
+    background-color: rgb(0, 0, 0);
+}
+.ani
+{
+    -webkit-transition: width 1.4s;
+    transition: width 1.4s ;
+    width : 0%;
+    margin-left: 0;
+}
+select
+{
+    position: relative;
+    margin-bottom: 20px;
+    left: 75%;
+}

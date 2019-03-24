@@ -1,0 +1,338 @@
+/*
+Theme Name: Ality-zh_TW
+Theme URI: http://zmingcx.com/wordpress-theme-ality.html
+Author: 知更鳥
+Author URI: http://zmingcx.com/
+Description: HTML5+CSS3響應式佈局，適合不同分辨率的設備，支持Retina（視網膜）顯示，自定義小工具，自動縮略圖，ajax評論，圖片lightbox查看、延遲加載等功能。
+Version: 0.2
+*/
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+/** 全局 **/
+body,
+button,
+input,
+select,
+textarea {
+	font: 14px "Microsoft YaHei", 微軟雅黑, Helvetica, Arial, Lucida Grande,Tahoma,sans-serif;
+	color: #444;
+	line-height:160%;
+	background: #fff;
+}
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+/** 鏈接 **/
+.wp_keywordlink { color:#1b66d8; text-decoration: underline; font-weight: bold; }
+.wp_keywordlink_affiliate { color:#1b66d8; text-decoration: underline; font-weight: bold; }
+a {
+	color: #444;
+	text-decoration: none;
+}
+a:hover {
+	color:#9b1203;
+}
+ul {
+	list-style: none;
+}
+.clear {
+	clear: both;
+}
+:focus { outline: 0 }
+/** 佈局 **/
+#page {}
+#main {
+	width: 1080px;
+	margin: 0 auto 10px;
+}
+/** 頭部 **/
+#header {
+	width: 1080px;
+	margin: 0 auto;
+}
+.main-header {
+	float: left;
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+.header-clear {
+	width: 100%;
+	height: 50px;
+	_height: 10px;
+	_overflow: hidden;
+}
+.logo-main{
+	float: left;
+	padding: 0 0 0 10px;
+}
+.logo {
+	background: url(img/logo.png) no-repeat;
+	width: 220px;
+	height: 53px;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+/** 標題 **/
+.title-main{
+	margin: 4px 0;
+}
+.main-header h1 {
+	font-size: 20px;
+}
+.main-header h2 {
+	font-size: 14px;
+	color: #999;
+}
+/** 頂部菜單 **/
+#header-top {
+	background: #fff;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	z-index:999;
+	*+right: 0;
+	border-bottom: 1px solid #ccc;
+}
+.shadow {
+	box-shadow: 0 0 5px #888;
+}
+#top-nav {
+	width: 1080px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+#top-nav .home_h {
+	_display: none;
+}
+#top-nav .home_h a {
+	background: #fff;
+	float: left;
+	width: 96px;
+	height: 40px;
+	font-size: 20px;
+	color: #888;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+#top-nav .home_h a:hover {
+	background: #afafaf;
+	color: #fff;
+}
+#top-nav.current_page_item, #top-nav .current-menu-item {
+	background: #afafaf;
+}
+#top-nav .current-menu-item a,#top-nav .current_page_item a {
+	color: #fff !important;
+}
+#top-nav .current-menu-item li a,#top-nav .sub-menu a ,#top-nav .current_page_item li a {
+	color: #393939;
+}
+.sub-menu a:hover {
+	color: #0196e3 !important;
+}
+#top-nav li {
+	float: left;
+	height: 40px;
+	border-right: 1px solid #ccc;
+}
+#top-nav li a, #top-nav li a:link, #top-nav li a:visited {
+	display: block;
+	padding: 0 20px 0 20px;
+	line-height:40px; 
+}
+#top-nav li a:hover, #top-nav li a:active {
+	background: #afafaf;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	line-height: 40px; 
+	padding: 0 20px 0 20px;
+}
+#top-nav li li {
+	height: 30px;
+	float: left;
+}
+#top-nav li ul li {
+	border-top: 1px solid #989898;
+	border-bottom: 1px solid #343434;
+}
+#top-nav li ul li a {
+	background: #4b4b4b;
+	width: 109px;
+	height: 30px;
+	color: #fff !important;
+	font-weight: normal;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#top-nav li ul li a:hover {
+	background: #000;
+	color: #fff !important;
+	text-decoration: none;
+}
+/** 主要菜單 **/
+#site-nav {
+	background:#b24d1e;/**檔頭主色**/
+	height: 40px;
+	font-size: 14px;
+}
+#site-nav.current_page_item , #site-nav .current-menu-item {
+	background:#4b4b4b;
+}
+#site-nav .current-menu-item a,#site-nav .current_page_item a {
+	color: #fff !important;
+}
+#site-nav .current-menu-item  li a,#site-nav .sub-menu a ,#site-nav .current_page_item li a {
+	color:#4b4b4b;
+}
+.sub-menu a:hover {
+	color:#4b4b4b !important;
+}
+#site-nav li {
+	float: left;
+	height: 40px;
+	border-right: 1px solid #a54417;
+	border-left: 1px solid #a54417;
+}
+.fill{
+	width: 2px;
+	border-right: none !important;
+	border-left: 1px solid #a54417;
+}
+#site-nav li a, #site-nav li a:link, #site-nav li a:visited {
+	display: block;
+	padding: 0 20px 0 20px;
+	line-height: 40px;
+	color: #fff;
+}
+#site-nav li a:hover, #site-nav li a:active {
+	background: #ba2900;/**檔頭背影色**/
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	line-height: 40px; 
+	padding: 0 20px 0 20px;
+}
+#site-nav li li {
+	float: left;
+	height: 30px;
+}
+#site-nav li ul li {
+	margin: 0 0 0 -1px;
+	border-top: 1px solid #989898;
+	border-bottom: 1px solid #343434;
+	border-right: 1px solid #6f6f6f;
+	border-left: 1px solid #6f6f6f;
+}
+#site-nav li ul li a {
+	background: #4b4b4b;
+	width: 109px;
+	height: 30px;
+	color: #fff !important;
+	font-weight: normal;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#site-nav li ul li a:hover {
+	background: #000;
+	color: #fff !important;
+	text-decoration: none;
+}
+.main-nav li li a {
+	line-height: 30px !important;
+}
+.main-nav li ul {
+	position: absolute;
+	left: -999em;
+	width: 150px;
+	margin: 0;
+	border-width: 1px 1px 0px;
+	z-index: 999;
+}
+.main-nav li ul li a:hover { }
+.main-nav .sf-sub-indicator {
+	display: none;
+}
+.main-nav li ul li a.sf-with-ul {
+	padding: 7px 12px;
+}
+.main-nav li ul ul {
+	margin: -31px 0px 0px 150px;
+}
+.main-nav li ul ul li a {}
+.main-nav li ul li ul li a {}
+.main-nav li:hover, .main-nav li.hover {
+	position: static;
+}
+.main-nav li:hover ul ul, .main-nav li.sfhover ul ul,
+.main-nav li:hover ul ul ul, .main-nav li.sfhover ul ul ul,
+.main-nav li:hover ul ul ul ul, .main-nav li.sfhover ul ul ul ul {
+	left: -999em;
+}
+.main-nav li:hover ul, .main-nav li.sfhover ul,
+.main-nav li li:hover ul, .main-nav li li.sfhover ul,
+.main-nav li li li:hover ul, .main-nav li li li.sfhover ul,
+.main-nav li li li li:hover ul, .main-nav li li li li.sfhover ul {
+	left: auto;
+}
+content {
+	position: relative;
+	background: #fff;
+	margin: 0 0 10px 0;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+}
+.content-m {
+	position: relative;
+	background: #fff;
+	color: #000;
+	margin: 0 0 10px 0;
+	padding: 10px 20px;
+	border: 1px solid#9b1203;
+}
+.entry-title {
+	width:90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.entry-header {
+	position: relative;
+}
+.entry-header h1 {
+	font-size: 15px;
+	margin: 0 0 5px 0;
+}
+.entry-meta {
+	margin: 5px 0 0 0;
+}
+.entry-meta,.entry-meta a {
+	color: #8b8b8b;
+}
+.entry-meta a:hover,.entry-meta a:hover {
+	color: #21759b;
+}
+.entry-site {
+	text-justify: inter-ideograph;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.title-heavy {
+	position:absolute;
+	background:#9b1203;
+	top: 0;
+	left: -21px;
+	width: 5px;
+	height: 23px;
